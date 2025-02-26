@@ -1,0 +1,121 @@
+Networking:
+    A better definition for networking is, “sharing information and resources."
+    The best definition of a computer network is, “two or more computers that connected for the purpose of communicating and sharing information and resources.”
+
+    Redundancy means having more than one of something.
+
+    Before computer networking, people with this problem used the first form of networking, “Sneakernet.” Sneakernet means you copy the file to a disk, then put on your sneakers.
+
+
+Servers
+    A server is a computer that provides services to other computers on a network. It is a computer
+    
+    Any node that shares resources and responds to requests can be called a server. All computers generally function as servers in some way
+
+    Because other devices depend on the services of the server, servers usually have redundant (duplicate) hardware components. That way, even if something breaks, the server can continue to run. They also usually have special operating systems. The most common server operating systems in use today are Microsoft Windows Server ® and Linux.
+
+Clients
+    A client is a network computer that uses the resources of servers. The client computer can also perform its own tasks and processing. All computers generally function as clients at some point.
+    
+    However, when we use the word “client,” we’re typically talking about a computer that has been designed to be used by end users. Clients are often called desktops or workstations. They usually run operating systems that are more responsive to users.
+    
+    Client also implies the computer is used in a business. The most popular client operating systems are Microsoft Windows ® and certain distributions of Linux.
+
+Peer Computers
+    A peer is a computer that acts as both a server and a client to other computers on a network. Peer computing is most often used in smaller networks that don’t have a dedicated server. Although, peers can belong to networks with servers. 
+
+    Peer computers run client operating systems. The key difference between clients and peers is whether they have a security relationship with the server. If users that have an account on the server can log in on the workstation, it’s a client. If the user needs to have an account on the workstation, then it’s a peer.
+
+Host Computers
+    A host computer is a central computer system that performs storage and processing for other devices. On a host-based network, the host computer does all computing. It then returns the data to the end user’s terminal. Host computers are often referred to as mainframes.
+
+    In the early days of networking, all computers were hosts. The hosts were then joined together in the early research networks that became the Internet. As the TCP/IP protocol became popular, and personal computers joined the networks, the term host became generalized. Now “host” is used to describe to any node on a TCP/IP network.
+
+Terminals
+    A terminal is a specialized device on a host-based network. Users enter data into the terminal. The terminal sends the data to a host for processing. The host sends the results back to the terminal. Terminals are often called “dumb terminals.” Unlike clients, they have no processor or memory of their own. They’re usually just a keyboard and a monitor. Standard client computers that need to interact with host computers can run software called a terminal emulator so that they appear as terminals to the host.
+
+Local Area Networks (LANs)
+    When it comes to types of networks, the terms can be confusing. The nature of networking has changed quite a bit since these terms were invented. 
+
+    A Local Area Network (LAN) implies a self-contained network. LANs exist in small areas, such as a single building, floor, or room. In a LAN, all nodes are directly connected with cables or short-range wireless. LANs do not need any outside technology, like an Internet Service Provider (ISP), to function. Due to their smaller size, LANs have faster speeds than other network types. Most modern LANs use a technology called Ethernet. You will learn more about Ethernet later in the course.
+
+    Instead of “LAN,” professionals might refer to a LAN as the “local network.”
+
+    If you’re talking about a computer, “local” means “contained in the computer itself.” If you’re talking about a network, “local” means “connected to the same network.” This might refer to the whole LAN. Or it could mean “all the nodes that can talk to each other without needing a router.” Routers are devices that connect two or more different networks and can pass information between them.
+
+    Typically, LANs are supported by LAN Administrators. They manage and update the local network. The administrator’s job includes servicing hardware, cabling and software. They may perform installations and deployments, upgrades, and troubleshooting. To be a LAN administrator, you need a broad range of skills and knowledge about networking, software and hardware.
+
+Wide Area Networks (WANs)
+    A Wide Area Network (WAN) is a network that spans a large area. WANs often cross countries or continents. Typically, WANs connect multiple LANs and other networks. They use long-range transmission media provided by telecommunications companies. WANs can be private, which means that they belong to one company. Or they can be public, meaning they can be used by anyone. The Internet is a public WAN. 
+
+    When multiple networks form a larger network, we often call them subnetworks, subnets or segments. In that case, the “local network” is the one you’re using. The other networks are called “remote.” When messages travel through multiple networks, the connections are usually made by routers. That’s why we say that messages (traffic) are “routed” through a network.
+
+    Typically, WANs are maintained by WAN Administrators. They usually address more complex technical issues than LAN administrators. They tend to focus on resolving network issues rather than user issues. A WAN administrator typically performs the following duties: 
+
+    Designs and maintains the connections between remote segments. 
+
+    Develops and troubleshoots routing structures. 
+
+    Works with both voice and data systems.
+
+    Develops scripts to automate administrative tasks. 
+
+    Works on security issues and helps implement recovery schemes. 
+
+    Plans, tests, and implements hardware and software upgrades.
+
+
+The Internet:
+
+    The Internet, publicly owned and operated, is the largest WAN. It links virtually every country in the world. Here is a brief history of the Internet.
+
+Here’s a detailed breakdown of different comparisons involving the term **host** in networking, computing, and virtualization:
+
+---
+
+### 1️⃣ **Host vs. Server**
+| **Aspect** | **Host** | **Server** |
+|------------|---------|-----------|
+| **Definition** | Any device connected to a network that can send or receive data. | A specialized host that provides services to other devices (clients). |
+| **Function** | Can be a client, a server, or both. | Serves resources (web pages, files, databases, etc.) to clients. |
+| **Example** | Your personal computer, smartphone, or IoT device. | A web server hosting a website or a database server. |
+| **Key Difference** | A host can be any device on a network. | A server is a **type of host** that provides services. |
+
+> **Example**: A laptop connected to a Wi-Fi network is a **host**. If that laptop runs a web server software (like Apache), it becomes a **server**.
+
+---
+### 2️⃣ **Host vs. Node**
+| **Aspect** | **Host** | **Node** |
+|------------|---------|---------|
+| **Definition** | A device that has an IP address and participates in network communication. | Any device that is part of a network and can send, receive, or process data. |
+| **Function** | Hosts communicate over a network using an IP address. | A node can be a **host, router, switch, or any networked device**. |
+| **Example** | Desktop PC, laptop, mobile phone, server. | Hosts, routers, switches, hubs, and even IoT devices. |
+| **Key Difference** | Always an end device with an IP address. | A broader term that includes network devices like routers and switches. |
+
+> **Example**: A **PC** is both a **host and a node**, but a **router** is only a node because it doesn’t have an IP address for user interaction.
+
+---
+### 6️⃣ **Host vs. Client**
+| **Aspect** | **Host** | **Client** |
+|------------|---------|-----------|
+| **Definition** | A device on a network. | A device that requests services from a server. |
+| **Function** | Can be a client, server, or both. | Requests data, processing, or resources from a server. |
+| **Example** | A PC running both a web server and a browser. | A web browser accessing Google. |
+| **Key Difference** | A host is any networked device. | A client **specifically requests** resources from a server. |
+
+> **Example**: Your **laptop (host)** is a **client** when browsing a website but becomes a **server** if it hosts a website.
+
+---
+
+
+The **Internet** is a **global network** that connects millions of private, public, academic, business, and government networks. It allows users worldwide to communicate, share resources, and access information.
+
+An **Intranet** is a **private network** used within an organization (company, university, government). It is used to share internal information securely.
+
+An **Extranet** is a **controlled, private network** that allows **external users** (partners, vendors, customers) to access specific parts of a company’s Intranet.
+
+An **Enterprise Network** is a large-scale **private network** used by big organizations to **connect multiple locations, data centers, and employees securely**.
+
+**SOHO networks** are **small-scale networks** used in home offices or small businesses with limited devices and users.
+
+
