@@ -1,0 +1,79 @@
+If you need to study **Windows Administration & Windows Server** within **2-4 days**, here’s a focused plan:  
+
+---
+
+## **📅 Day 1: Windows Administration & Active Directory**
+### **🔹 Windows Administration Basics**
+- Windows OS Architecture (Kernel, User Mode)  
+- User & Group Management (Local Users, Administrators, Permissions)  
+- File System Management (NTFS, FAT32, File/Folder Permissions)  
+- Local & Group Policies  
+- Basic Windows CMD & PowerShell Commands  
+
+### **🔹 Active Directory (AD) & Domain Management**
+- What is Active Directory?  
+- AD Structure (Domains, Forests, OUs, Sites)  
+- AD Users, Groups, and Computers  
+- Group Policy Basics (GPO Creation, Editing)  
+- FSMO Roles (Schema Master, RID Master, etc.)  
+
+---
+
+## **📅 Day 2: Windows Server & Networking**
+### **🔹 Windows Server Administration**
+- Windows Server Editions & Versions (2012, 2016, 2019, 2022)  
+- Server Core vs GUI  
+- Server Roles & Features (DNS, DHCP, AD DS, File Server)  
+- Remote Administration (RDP, RSAT, PowerShell Remoting)  
+
+### **🔹 Networking & Security**
+- IP Addressing & Subnetting  
+- DNS Server Configuration (Zones, Records, Forwarding)  
+- DHCP Server Configuration (Scopes, Reservations)  
+- Windows Firewall & Advanced Security  
+- BitLocker Encryption  
+- Windows Defender & Patch Management  
+
+---
+
+## **📅 Day 3: Storage, Virtualization & Troubleshooting**
+### **🔹 Storage & File Systems**
+- Disk Management (Basic vs Dynamic Disks, MBR vs GPT)  
+- RAID (RAID 0, 1, 5, 10 - Concepts)  
+- NTFS vs ReFS  
+- Distributed File System (DFS)  
+
+### **🔹 Virtualization & Cloud**
+- Hyper-V (Setup, Virtual Switches, VM Management)  
+- Windows Server in Cloud (AWS, Azure)  
+- Azure AD vs On-Prem AD  
+
+### **🔹 Troubleshooting & Performance Monitoring**
+- Task Manager, Resource Monitor, Performance Monitor (PerfMon)  
+- Event Viewer (Analyzing Logs)  
+- Windows Reliability Monitor  
+- Common Server Issues & Fixes  
+
+---
+
+## **📅 Day 4: PowerShell, Backup & Disaster Recovery**
+### **🔹 PowerShell for Windows Administration**
+- Basic PowerShell Commands  
+- Managing AD with PowerShell  
+- Automating Tasks with PowerShell  
+
+### **🔹 Backup & Disaster Recovery**
+- Windows Server Backup (WSB)  
+- Volume Shadow Copy  
+- System Restore & Recovery Options  
+- Failover Clustering & Hyper-V Backup  
+
+---
+
+### **💡 Quick Interview Tips**
+✔️ **Focus on Concepts** – Understand how things work instead of memorizing.  
+✔️ **Use Hands-On Labs** – If possible, set up a test Windows Server in a VM.  
+✔️ **Practice CMD & PowerShell Commands** – Interviewers may ask command-line tasks.  
+✔️ **Review Common Issues & Fixes** – Troubleshooting is a key skill in interviews.  
+
+Would you like a set of **interview questions** to practice as well? 🚀
