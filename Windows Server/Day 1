@@ -1,0 +1,213 @@
+Windows OS Architecture: Kernel & User Mode
+    Windows operating system is designed using a hybrid architecture, combining features of monolithic and microkernel designs. It is divided into two primary modes:
+
+    1️⃣ User Mode (Ring 3)
+        The User Mode is where applications and some system processes run.
+        It does not have direct access to hardware. Instead, it must communicate with the Kernel Mode through system calls (APIs).
+
+        If an application crashes, it does not affect the entire system—only that application will stop working.
+
+    2️⃣ Kernel Mode (Ring 0)
+        The Kernel Mode has full control over hardware (CPU, Memory, I/O devices).
+        It manages system resources (processes, memory, device drivers, etc.).
+        If something goes wrong (e.g., faulty driver), it can crash the entire system (BSOD - Blue Screen of Death).
+
+    Key Points
+        User Mode is for applications; Kernel Mode has full system control.
+        If a User Mode app crashes, it does not affect the OS.
+        If a Kernel Mode component fails (e.g., driver issue), it can cause a BSOD (Blue Screen of Death).
+        The Kernel manages processes, memory, and hardware communication.
+        HAL (Hardware Abstraction Layer) makes Windows compatible with different hardware.
+
+
+     Local User Accounts (Standalone Systems)
+        These accounts exist only on a specific machine and are stored in the Security Account Manager (SAM) database.
+        Local accounts are commonly used in standalone or workgroup-based systems.
+        
+        Examples:
+        
+        Administrator (Full system control)
+        Standard User (Limited access)
+        Guest (Temporary, highly restricted)
+        Default Local Accounts:
+        
+        Administrator:
+
+        Has full control over the system.
+        Can install software, change settings, and manage other users.
+        This account is disabled by default in modern Windows versions for security.
+        
+        Standard User:
+
+        Can use installed applications but cannot make system-wide changes.
+        Requires Administrator privileges (via UAC - User Account Control) to perform certain actions.
+        
+        Guest (Deprecated in Windows 10/11):
+
+        Limited access, no password required.
+        Cannot install software or change system settings.
+
+    🔹 Domain User Accounts (Active Directory)
+        Used in Windows Server environments with Active Directory (AD).
+        Stored in the AD database and can log in from any computer within the domain.
+        Managed by Group Policies to enforce security settings.
+        Examples:
+        johndoe@company.com
+        admin@domain.local
+
+    2️⃣ Managing User Accounts in Windows
+        Users can be managed via GUI or Command-Line Tools.
+
+        🔹 GUI Method (Local Users & Groups)
+            Open Run (Win + R) → Type lusrmgr.msc → Press Enter.
+            Navigate to Users to manage accounts.
+            Right-click on a user to Set Password, Rename, or Delete.
+        🔹 Command-Line Method
+            1️⃣ Creating a Local User:
+            cmd
+            Copy
+            Edit
+            net user JohnDoe P@ssword123 /add
+            Creates a user JohnDoe with the password P@ssword123.
+        2️⃣ Listing All Users:
+            cmd
+            Copy
+            Edit
+            net user
+        3️⃣ Deleting a User:
+            cmd
+            Copy
+            Edit
+            net user JohnDoe /delete
+        4️⃣ Checking User Account Details:
+            cmd
+            Copy
+            Edit
+            net user JohnDoe
+
+    🔹 Adding a User to a Group
+        Using GUI (Local Users & Groups)
+        Open lusrmgr.msc.
+        Navigate to Groups → Double-click the desired group.
+        Click Add and enter the username.
+
+        Using Command Line
+
+        net localgroup Administrators JohnDoe /add
+
+        Adds JohnDoe to the Administrators group.
+
+        net localgroup Users JohnDoe /delete
+
+        Removes JohnDoe from the Users group.
+
+    5️⃣ Account Policies & Security Measures
+        🔹 User Account Control (UAC)
+            Prevents unauthorized changes to the system.
+            Prompts for Admin approval when making system changes.
+        🔹 Password Policies (Local Security Policy - secpol.msc)
+            Minimum Password Length
+            Password Expiration
+            Account Lockout Policy
+
+    🔥 Key Takeaways
+        ✔ Local Users are stored on the system; Domain Users exist in Active Directory.
+        ✔ Groups simplify permission management by assigning rights collectively.
+        ✔ NTFS permissions control file & folder access.
+        ✔ UAC & Security Policies protect against unauthorized access.
+
+
+
+# **File System Management in Windows (NTFS, FAT32, File/Folder Permissions)**  
+
+File systems in Windows control **how data is stored and accessed**. Choosing the right file system is essential for **security, performance, and compatibility**.
+
+---
+
+## **1️⃣ Types of File Systems in Windows**  
+Windows supports multiple file systems, but the most commonly used are **NTFS** and **FAT32**.
+
+### **🔹 NTFS (New Technology File System)**
+✅ **Best for Windows systems** due to advanced features.  
+✅ Supports **large file sizes** & **large partitions**.  
+✅ Provides **security & access control**.  
+✅ Supports **compression & encryption** (BitLocker, EFS).  
+
+**🔹 Features:**  
+- **File & Folder Permissions** (Access Control Lists - ACLs)  
+- **Encryption (EFS - Encrypting File System)**  
+- **Compression (Reduces file size without affecting quality)**  
+- **Journaling (Logs changes to prevent data corruption)**  
+- **Supports files larger than 4GB**  
+
+**🛠️ When to Use NTFS?**  
+✔ Windows system drives (**C:\**)  
+✔ External HDDs & SSDs for Windows  
+✔ Secure file storage  
+
+---
+
+### **🔹 FAT32 (File Allocation Table 32)**
+✅ **Best for compatibility with older devices & OS (Mac, Linux, gaming consoles, etc.)**  
+✅ Works on **USB drives, SD cards, and external disks**.  
+❌ Does **NOT** support file sizes **above 4GB**.  
+❌ No built-in security or encryption.  
+
+**🔹 Features:**  
+- Compatible with **Windows, Mac, Linux, gaming consoles**.  
+- **No file permissions** (Everyone has full access).  
+- **Max file size:** **4GB**.  
+- **Max partition size:** **2TB**.  
+
+**🛠️ When to Use FAT32?**  
+✔ USB drives (for maximum compatibility)  
+✔ External storage that needs to be accessed on multiple platforms  
+
+---
+
+### **🔹 exFAT (Extended File Allocation Table)**
+✅ **Designed for flash storage (USB drives, SD cards, SSDs)**.  
+✅ Supports **large files** (>4GB), unlike FAT32.  
+✅ Compatible with **Windows & Mac (without additional software)**.  
+❌ **No file permissions or encryption (like FAT32)**.  
+
+**🛠️ When to Use exFAT?**  
+✔ Large **USB flash drives, SD cards**  
+✔ External drives used on **Windows & Mac**  
+
+
+## **3️⃣ File System Management: Formatting & Converting File Systems**
+### **🔹 Formatting a Drive (GUI)**
+1. **Open File Explorer → Right-click a drive → Click Format**.  
+2. Choose **NTFS, FAT32, or exFAT**.  
+3. Click **Start** to format.  
+
+### **🔹 Formatting a Drive (Command Line)**
+```cmd
+format E: /fs:NTFS /q
+```
+- Quick formats `E:` drive with **NTFS**.
+
+```cmd
+format E: /fs:FAT32
+```
+- Formats `E:` drive with **FAT32**.
+
+---
+
+### **🔹 Convert FAT32 to NTFS (Without Data Loss)**
+```cmd
+convert E: /fs:NTFS
+```
+- Converts `E:` drive from **FAT32** to **NTFS**.
+
+❗ **Note:** NTFS cannot be converted back to FAT32 without formatting.
+
+---
+
+## **🔥 Key Takeaways**
+✔ **NTFS**: Secure, supports large files, permissions, encryption. Best for Windows system drives.  
+✔ **FAT32**: Highly compatible, but **limited to 4GB files**. Best for USB drives.  
+✔ **exFAT**: Works on Windows & Mac, supports large files. Best for external storage.  
+✔ **NTFS Permissions**: Control access to files/folders using ACLs.  
+✔ Use **`icacls`** to manage file/folder permissions from the command line.  
