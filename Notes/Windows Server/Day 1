@@ -232,3 +232,384 @@ Group Policies (GPOs)	Multiple computers in a domain	gpmc.msc (Group Policy Mana
 ✔ Use gpresult /r to check which policies are applied.
 
 
+
+
+
+# **Basic Windows CMD & PowerShell Commands**  
+
+Windows **Command Prompt (CMD)** and **PowerShell** are essential tools for system administration, troubleshooting, and automation. Knowing key commands helps in managing users, files, networks, and processes effectively.
+
+---
+
+## **1️⃣ CMD (Command Prompt) Basics**
+🔹 **CMD (cmd.exe)** is a command-line interpreter used to execute commands in Windows.
+
+### **📌 File & Directory Commands**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `dir` | Lists files and directories | `dir C:\Users` |
+| `cd` | Changes the current directory | `cd C:\Windows` |
+| `md` / `mkdir` | Creates a new directory | `mkdir C:\MyFolder` |
+| `rd` / `rmdir` | Deletes an empty directory | `rmdir C:\MyFolder` |
+| `del` | Deletes files | `del C:\MyFile.txt` |
+| `ren` | Renames files or folders | `ren old.txt new.txt` |
+| `copy` | Copies files | `copy file.txt D:\Backup\` |
+| `move` | Moves files or folders | `move file.txt D:\Docs\` |
+| `attrib` | Displays or modifies file attributes | `attrib +r file.txt` (Sets as read-only) |
+
+---
+
+### **📌 User & Group Management**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `net user` | Lists all user accounts | `net user` |
+| `net user <username> /add` | Creates a new user | `net user John password123 /add` |
+| `net user <username> /delete` | Deletes a user account | `net user John /delete` |
+| `net localgroup administrators` | Lists users in the Administrators group | `net localgroup administrators` |
+| `net localgroup administrators <user> /add` | Adds a user to the Administrators group | `net localgroup administrators John /add` |
+| `net localgroup administrators <user> /delete` | Removes a user from a group | `net localgroup administrators John /delete` |
+
+---
+
+### **📌 Network Commands**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `ipconfig` | Displays network details (IP, Gateway) | `ipconfig` |
+| `ipconfig /all` | Shows detailed network info | `ipconfig /all` |
+| `ping <IP/Domain>` | Checks connectivity | `ping google.com` |
+| `tracert <IP/Domain>` | Shows route to a network destination | `tracert google.com` |
+| `netstat -an` | Displays active network connections | `netstat -an` |
+| `nslookup <domain>` | Finds IP address of a domain | `nslookup google.com` |
+| `arp -a` | Displays ARP table (IP-MAC mapping) | `arp -a` |
+
+---
+
+### **📌 Process & System Management**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `tasklist` | Lists running processes | `tasklist` |
+| `taskkill /PID <PID> /F` | Kills a process by ID | `taskkill /PID 1234 /F` |
+| `shutdown /s /t 60` | Shutdown after 60 sec | `shutdown /s /t 60` |
+| `shutdown /r /t 0` | Restart system immediately | `shutdown /r /t 0` |
+| `systeminfo` | Displays system details | `systeminfo` |
+| `wmic cpu get name` | Displays CPU information | `wmic cpu get name` |
+
+---
+
+## **2️⃣ PowerShell Basics**
+🔹 **PowerShell** is a scripting language and command-line shell for system administration.
+
+### **📌 File & Directory Commands**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `Get-ChildItem` | Lists files and folders | `Get-ChildItem C:\` |
+| `Set-Location` | Changes directory | `Set-Location C:\Windows` |
+| `New-Item` | Creates a new file or folder | `New-Item C:\Test.txt` |
+| `Remove-Item` | Deletes files or folders | `Remove-Item C:\Test.txt` |
+| `Copy-Item` | Copies files or folders | `Copy-Item file.txt D:\Backup\` |
+| `Move-Item` | Moves files or folders | `Move-Item file.txt D:\Docs\` |
+
+---
+
+### **📌 User & Group Management**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `Get-LocalUser` | Lists all local users | `Get-LocalUser` |
+| `New-LocalUser` | Creates a new local user | `New-LocalUser -Name "John" -Password (ConvertTo-SecureString "password" -AsPlainText -Force)` |
+| `Remove-LocalUser` | Deletes a local user | `Remove-LocalUser -Name "John"` |
+| `Get-LocalGroup` | Lists all local groups | `Get-LocalGroup` |
+| `Add-LocalGroupMember` | Adds a user to a group | `Add-LocalGroupMember -Group "Administrators" -Member "John"` |
+| `Remove-LocalGroupMember` | Removes a user from a group | `Remove-LocalGroupMember -Group "Administrators" -Member "John"` |
+
+---
+
+### **📌 Network Commands**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `Get-NetIPAddress` | Displays network interface details | `Get-NetIPAddress` |
+| `Test-Connection <IP/Domain>` | Pings an address | `Test-Connection google.com` |
+| `Get-NetAdapter` | Shows network adapter details | `Get-NetAdapter` |
+| `Get-NetTCPConnection` | Displays active connections | `Get-NetTCPConnection` |
+| `Resolve-DnsName <domain>` | Resolves a domain to IP | `Resolve-DnsName google.com` |
+
+---
+
+### **📌 Process & System Management**
+| **Command** | **Description** | **Example** |
+|------------|----------------|-------------|
+| `Get-Process` | Lists running processes | `Get-Process` |
+| `Stop-Process -Name "notepad"` | Kills a process by name | `Stop-Process -Name "chrome"` |
+| `Restart-Computer` | Restarts the system | `Restart-Computer` |
+| `Shutdown-Computer` | Shuts down the system | `Shutdown-Computer` |
+| `Get-Service` | Lists all services | `Get-Service` |
+| `Restart-Service <ServiceName>` | Restarts a service | `Restart-Service -Name Spooler` |
+| `Get-WMIObject Win32_OperatingSystem` | Displays OS details | `Get-WMIObject Win32_OperatingSystem` |
+
+---
+
+## **🔥 Key Takeaways**
+✔ **CMD is simpler**, used for basic tasks like file management and network troubleshooting.  
+✔ **PowerShell is more powerful**, used for automation, scripting, and system administration.  
+✔ **CMD commands include `dir`, `net user`, `ping`, `shutdown`, `tasklist`.**  
+✔ **PowerShell commands include `Get-Process`, `Get-Service`, `Get-NetIPAddress`, `New-Item`.**  
+✔ **Use `gpupdate /force` in CMD or PowerShell to apply group policies immediately.**  
+
+Would you like **interview questions** or a **practice set** on this topic? 🚀
+
+
+
+
+
+
+# **Active Directory (AD) - Explained**  
+
+**Active Directory (AD)** is a **directory service** developed by **Microsoft** for Windows domain networks. It is used for **centralized management** of users, computers, and other resources in an organization.  
+
+---
+
+## **1️⃣ What is Active Directory?**  
+🔹 **Active Directory (AD)** is a **hierarchical database** that stores and manages information about users, computers, groups, and other objects in a network.  
+🔹 It enables **centralized authentication, authorization, and management** of network resources.  
+🔹 AD runs on **Windows Server** and provides **Single Sign-On (SSO)** capabilities.  
+
+💡 **Example:** Instead of manually creating user accounts on each computer, AD allows **centralized user management**, so users can log in to any computer in the network with the same credentials.
+
+---
+
+## **2️⃣ Key Components of Active Directory**  
+
+### **📌 1. Domain**  
+- A **domain** is a logical group of computers, users, and devices managed under **one central database**.  
+- **Example:** `company.com` is a domain where all user accounts and computers are stored centrally.  
+
+### **📌 2. Domain Controller (DC)**  
+- A **Domain Controller (DC)** is a Windows Server that **stores and manages AD data**.  
+- It **authenticates** and **authorizes** users in the network.  
+- **Example:** When a user logs into their computer, the DC verifies their credentials.  
+
+### **📌 3. Organizational Unit (OU)**  
+- **OUs** are containers that **organize users, groups, and computers** within a domain.  
+- Helps apply **Group Policies** to specific departments.  
+- **Example:** `IT Department`, `HR`, and `Finance` can be separate **OUs** with different policies.  
+
+### **📌 4. Active Directory Objects**  
+Objects are the **building blocks** of AD. The most common objects are:  
+✅ **Users** → Employees, administrators  
+✅ **Groups** → Collection of users with shared permissions  
+✅ **Computers** → Workstations and servers  
+✅ **Printers** → Networked printers  
+✅ **Shared Folders** → Shared network resources  
+
+### **📌 5. Forest, Tree & Domain**
+- **Forest:** The **highest-level** structure in AD that contains one or more domains.  
+- **Tree:** A collection of **multiple domains** that share a common root domain (e.g., `sales.company.com`, `hr.company.com`).  
+- **Domain:** A single logical group of users, computers, and resources.  
+
+### **📌 6. Group Policy (GPO)**
+- A **set of rules** that enforce security and configuration settings across users/computers.  
+- **Example:** Restricting USB access, setting password policies, and controlling software installations.  
+
+---
+
+## **3️⃣ How Does Active Directory Work?**
+1️⃣ A user tries to **log in** to a computer.  
+2️⃣ The login request is sent to a **Domain Controller (DC)**.  
+3️⃣ The DC **verifies the credentials** (username/password).  
+4️⃣ If authentication is successful, the user **gains access** to network resources.  
+
+💡 **Example:** If a company employee logs in to their office computer, the DC checks their **username and password** and allows access if valid.
+
+---
+
+## **4️⃣ Active Directory Services**
+AD is made up of several **services** that manage authentication, policies, and more.  
+
+| **Service** | **Description** |
+|------------|----------------|
+| **Active Directory Domain Services (AD DS)** | The **main service** that manages domain users, computers, and resources. |
+| **Active Directory Lightweight Directory Services (AD LDS)** | A **lightweight version** of AD DS used for specific applications. |
+| **Active Directory Federation Services (AD FS)** | Provides **Single Sign-On (SSO)** across different applications. |
+| **Active Directory Certificate Services (AD CS)** | Manages **digital certificates** for encryption and authentication. |
+| **Active Directory Rights Management Services (AD RMS)** | Protects **sensitive data** using encryption and access controls. |
+
+---
+
+## **5️⃣ Benefits of Active Directory**
+✔ **Centralized User Management** – Manage all users from one place.  
+✔ **Single Sign-On (SSO)** – Users log in once to access multiple services.  
+✔ **Enhanced Security** – Enforce password policies, 2FA, and access controls.  
+✔ **Group Policies** – Apply consistent settings to users and computers.  
+✔ **Scalability** – Supports small to enterprise-level networks.  
+
+---
+## **🔥 Summary**
+- **Active Directory (AD)** is a **directory service** that manages users, computers, and network resources.
+- **Domain Controller (DC)** is a server that authenticates users.
+- **Objects** in AD include **Users, Groups, Computers, and Resources**.
+- **Group Policies (GPOs)** help enforce security and system settings.
+- **SSO (Single Sign-On)** allows users to access multiple services with one login.
+- **PowerShell** and **CMD** commands are used for AD management.
+
+Would you like a **hands-on lab guide** or a **real-world scenario example**? 🚀
+
+
+
+# **Active Directory Structure (Domains, Forests, OUs, Sites)**
+Active Directory (AD) is a **hierarchical directory service** that organizes network resources such as users, computers, and groups in a structured manner. Its structure consists of **Domains, Trees, Forests, Organizational Units (OUs), and Sites** to enable efficient management and security.
+
+---
+
+## **1️⃣ Active Directory Hierarchy Overview**
+🔹 AD follows a **top-down hierarchical structure**  
+🔹 It is **scalable**, meaning organizations of any size can use it  
+🔹 It provides **centralized management** for authentication, authorization, and policies  
+
+### **🔷 Basic AD Structure**
+```
+FOREST
+ ├── TREE 1 (company.com)
+ │    ├── DOMAIN 1 (sales.company.com)
+ │    ├── DOMAIN 2 (hr.company.com)
+ │
+ ├── TREE 2 (subsidiary.com)
+      ├── DOMAIN 3 (support.subsidiary.com)
+```
+---
+# **2️⃣ Domains**
+## **📌 What is a Domain?**
+A **Domain** is the **basic unit** of an Active Directory environment. It is a **logical grouping** of users, computers, and other objects that share a **common security policy** and are managed centrally.
+
+✅ A **domain** is identified by a **DNS name** (e.g., `company.com`)  
+✅ All **user accounts, computers, printers, and security policies** belong to a domain  
+✅ **Single Sign-On (SSO)** allows users to log in once and access multiple resources  
+
+### **Example:**
+- If `company.com` is an AD domain:
+  - **Users**: John, Alice, Bob  
+  - **Computers**: LAP001, DESKTOP002  
+  - **Groups**: IT, HR, Sales  
+
+### **🔹 Key Features of a Domain**
+- **Authentication & Authorization**: Users log in using a **Domain Controller (DC)**  
+- **Security Policies**: Password policies, user access restrictions, and Group Policies apply to all objects within the domain  
+- **Replication**: If multiple **Domain Controllers (DCs)** exist, they replicate changes to each other for redundancy  
+
+---
+# **3️⃣ Trees**
+## **📌 What is a Tree in AD?**
+A **Tree** is a collection of **one or more domains** that share a **common namespace** (same root domain).  
+- Domains within a Tree **automatically trust each other** (Transitive Trust).  
+- They follow a **hierarchical structure**, where child domains inherit security policies from parent domains.  
+
+### **Example:**
+- `company.com` (Root Domain)
+  - `sales.company.com` (Child Domain)
+  - `hr.company.com` (Child Domain)  
+  These domains **belong to the same tree** because they share the `company.com` namespace.
+
+### **🔹 Key Features of Trees**
+- **Hierarchical Structure**: Child domains inherit policies from the parent domain.  
+- **Transitive Trust**: If `hr.company.com` trusts `company.com`, and `sales.company.com` trusts `company.com`, then `hr.company.com` also trusts `sales.company.com` automatically.  
+
+---
+# **4️⃣ Forests**
+## **📌 What is a Forest in AD?**
+A **Forest** is the **top-most structure** in Active Directory that contains **one or more Trees**.  
+- **Different Trees** can have **separate domain names** but still be part of the same Forest.  
+- **Forests are independent security boundaries**—objects from one forest **do not** interact with another forest unless explicitly configured.  
+
+### **Example:**
+```
+FOREST 1
+ ├── company.com (Tree 1)
+ │    ├── sales.company.com
+ │    ├── hr.company.com
+ │
+ ├── subsidiary.com (Tree 2)
+      ├── support.subsidiary.com
+```
+### **🔹 Key Features of Forests**
+- **Global Catalog (GC)**: A **searchable index** of objects across the entire forest.  
+- **Trust Relationships**: Can be set up **manually** between forests for cross-communication.  
+- **Schema**: Defines the structure and attributes of objects (e.g., User objects must have attributes like Name, Email, and Department).  
+
+### **📌 When is a Multi-Forest Setup Used?**
+✔ When organizations **merge** but want to maintain separate security boundaries.  
+✔ When different business units need **strict separation** of IT resources.  
+
+---
+# **5️⃣ Organizational Units (OUs)**
+## **📌 What is an Organizational Unit (OU)?**
+An **OU is a container** used to **group users, computers, and other objects** within a domain.  
+- OUs **do not create security boundaries** but are used for **management and policy application**.  
+- Group Policies can be **applied to OUs** to control settings for users and computers.  
+
+### **Example OU Structure in `company.com`:**
+```
+company.com
+ ├── Users OU
+ │    ├── IT Department
+ │    ├── HR Department
+ │    ├── Sales Department
+ │
+ ├── Computers OU
+ │    ├── Workstations
+ │    ├── Servers
+```
+
+### **🔹 Key Features of OUs**
+- **Delegation**: Admins can assign different IT staff to manage specific OUs (e.g., HR Admin can manage HR accounts).  
+- **Group Policy Application**: Password policies, software restrictions, and desktop settings can be applied at the **OU level**.  
+- **Simplified Management**: Helps **organize** users and devices **without creating separate domains**.  
+
+---
+# **6️⃣ Sites**
+## **📌 What is a Site in AD?**
+A **Site** represents a **physical location** in an Active Directory infrastructure.  
+- Sites help **optimize replication and authentication** across geographically dispersed locations.  
+- **Multiple Domain Controllers (DCs)** in different sites improve performance by **reducing network traffic**.  
+
+### **Example:**
+```
+company.com
+ ├── Site 1: New York (NY Office)
+ │    ├── DC1
+ │    ├── File Server
+ │
+ ├── Site 2: Los Angeles (LA Office)
+      ├── DC2
+      ├── Print Server
+```
+
+### **🔹 Key Features of Sites**
+- **Reduces Logon Delays**: Users authenticate with the **nearest** Domain Controller (DC).  
+- **Optimizes Replication**: Changes in AD **replicate efficiently** between sites.  
+- **Site Links**: Define how **data flows** between geographically separate locations.  
+
+### **📌 When are Sites Used?**
+✔ If a company has **offices in multiple cities**, Sites help manage network traffic efficiently.  
+✔ If a business needs **load balancing** across servers in different locations.  
+
+---
+# **🔥 Summary Table**
+| **Component** | **Description** |
+|--------------|----------------|
+| **Domain** | Logical grouping of users, computers, and resources under one security policy. |
+| **Tree** | Collection of one or more domains sharing a common namespace. |
+| **Forest** | The highest structure, containing multiple trees, domains, and shared resources. |
+| **OU** | A container within a domain to organize and manage users, groups, and policies. |
+| **Site** | Represents a physical location and optimizes authentication and replication. |
+
+---
+# **7️⃣ Common Interview Questions on AD Structure**
+🔹 **What is a Domain in Active Directory?**  
+🔹 **How does a Tree differ from a Forest in AD?**  
+🔹 **What is the purpose of Organizational Units (OUs)?**  
+🔹 **How do Sites improve Active Directory performance?**  
+🔹 **What is a Global Catalog in AD?**  
+🔹 **How do Trusts work between Domains and Forests?**  
+🔹 **What are the benefits of using a multi-forest setup?**  
+
+---
+### 🚀 **Next Steps**
+Would you like **practical lab exercises** to set up a small AD environment in Windows Server? 🔥
