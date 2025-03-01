@@ -211,3 +211,24 @@ convert E: /fs:NTFS
 ✔ **exFAT**: Works on Windows & Mac, supports large files. Best for external storage.  
 ✔ **NTFS Permissions**: Control access to files/folders using ACLs.  
 ✔ Use **`icacls`** to manage file/folder permissions from the command line.  
+
+
+
+Local & Group Policies in Windows
+
+Windows uses Local Policies and Group Policies to manage security settings, user permissions, and system configurations across standalone and domain-joined computers. These policies help administrators control user access, enforce security rules, and automate system management.
+
+1️⃣ What Are Local Policies & Group Policies?
+Policy Type	            Scope	            Management Tool	    Use Case
+Local Policies	        Individual computers	secpol.msc (Local Security Policy) or gpedit.msc (Local Group Policy Editor)	Used for standalone computers to control security settings, user rights, and audit policies.
+Group Policies (GPOs)	Multiple computers in a domain	gpmc.msc (Group Policy Management Console)	Used in Active Directory (AD) environments to enforce settings across multiple computers.
+
+
+🔥 Key Takeaways
+✔ Local Policies (secpol.msc) manage security settings on standalone computers.
+✔ Local Group Policies (gpedit.msc) control system settings, security, and user permissions.
+✔ Group Policies (gpmc.msc) apply settings across Active Directory (AD) environments.
+✔ Use gpupdate /force to apply policies immediately.
+✔ Use gpresult /r to check which policies are applied.
+
+
