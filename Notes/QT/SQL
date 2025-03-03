@@ -1,0 +1,121 @@
+Here is a full-fledged list of **SQL & Database** questions, categorized by topic to help you prepare effectively.
+
+---
+
+## **1. Basic SQL Queries**  
+1. What is SQL? Explain its types.  
+2. What is the difference between **DDL, DML, DCL, and TCL**?  
+3. Write an SQL query to **retrieve all records from a table**.  
+4. How do you **filter data** using `WHERE`? Give an example.  
+5. How do you retrieve **unique records** from a table?  
+6. How do you retrieve records **based on a specific condition** (e.g., employees with salaries greater than 50,000)?  
+7. What is the difference between **HAVING** and **WHERE**?  
+8. Write an SQL query to retrieve **the 5 highest-paid employees**.  
+9. Write an SQL query to retrieve **records between two dates**.  
+10. Write a query to retrieve **employee names starting with ‘A’**.  
+
+---
+
+## **2. Joins & Relationships**  
+11. What is a **JOIN** in SQL?  
+12. Explain the different types of **JOINs** (`INNER`, `LEFT`, `RIGHT`, `FULL OUTER`).  
+13. What is a **SELF JOIN**? Give an example.  
+14. Write an SQL query using a **JOIN** to get employees and their department names.  
+15. What is a **CROSS JOIN**? How is it different from other joins?  
+16. What is a **NATURAL JOIN**?  
+17. Difference between **EQUI JOIN and NON-EQUI JOIN**.  
+18. How do you perform a **JOIN between two tables without a common column**?  
+
+---
+
+## **3. Keys & Constraints**  
+19. What is a **Primary Key**? Can a table have more than one Primary Key?  
+20. What is a **Foreign Key**? Explain with an example.  
+21. What is a **Unique Key**, and how is it different from a Primary Key?  
+22. Can a table have multiple Foreign Keys?  
+23. What is a **Composite Key**?  
+24. What are **Constraints** in SQL? Name some types.  
+25. What is the difference between **CHECK and DEFAULT constraints**?  
+26. How do you apply a constraint on an existing table?  
+
+---
+
+## **4. Aggregation & Grouping**  
+27. What is **GROUP BY** in SQL?  
+28. How does **GROUP BY** work with aggregate functions (`COUNT`, `SUM`, `AVG`, `MAX`, `MIN`)?  
+29. Difference between **HAVING and WHERE** in SQL?  
+30. How do you count **the number of employees in each department** using SQL?  
+31. How do you retrieve the **department with the highest average salary**?  
+
+---
+
+## **5. Subqueries & Advanced Queries**  
+32. What is a **Subquery**?  
+33. What are the different types of **Subqueries**?  
+34. How is a **Correlated Subquery** different from a regular Subquery?  
+35. Write a query using a **Subquery** to find employees who earn more than the average salary.  
+36. What is an **EXISTS** clause? How is it different from `IN`?  
+37. Difference between `ANY` and `ALL` operators in SQL.  
+
+---
+
+## **6. Indexing & Performance Optimization**  
+38. What is an **Index** in SQL?  
+39. What are the types of **Indexes** in SQL?  
+40. What is the difference between **Clustered and Non-clustered Indexes**?  
+41. How does indexing improve performance?  
+42. What is the disadvantage of too many indexes?  
+43. How do you optimize a slow SQL query?  
+44. What is **Query Execution Plan**, and how do you analyze it?  
+
+---
+
+## **7. Stored Procedures & Functions**  
+45. What is a **Stored Procedure**?  
+46. What is a **Function** in SQL?  
+47. Difference between **Stored Procedure and Function**?  
+48. Write a simple Stored Procedure to **insert a record into a table**.  
+49. What are **IN, OUT, and INOUT parameters** in Stored Procedures?  
+50. What is **Cursors** in SQL?  
+
+---
+
+## **8. Transactions & Locks**  
+51. What is a **Transaction** in SQL?  
+52. What are the **ACID properties** in SQL?  
+53. Explain **Commit, Rollback, and Savepoint** in SQL.  
+54. What is a **Deadlock** in SQL?  
+55. What are different types of **Locks** in SQL?  
+56. How do you avoid Deadlocks in SQL?  
+
+---
+
+## **9. Views & Temporary Tables**  
+57. What is a **View** in SQL?  
+58. Can we perform **DML operations on Views**?  
+59. What are **Materialized Views**?  
+60. What is a **Temporary Table** in SQL?  
+61. Difference between **Global and Local Temporary Tables**?  
+
+---
+
+## **10. NoSQL vs SQL**  
+62. What is the difference between **SQL and NoSQL databases**?  
+63. When should you use NoSQL over SQL?  
+64. Name some **NoSQL databases** and their use cases.  
+65. Difference between **Key-Value Stores, Document Stores, and Graph Databases**?  
+
+---
+
+## **11. Advanced SQL Topics**  
+66. What is **Normalization** in SQL? Explain **1NF, 2NF, 3NF, and BCNF**.  
+67. What is **Denormalization**, and when is it used?  
+68. What is a **Trigger** in SQL?  
+69. How do you write an **AFTER INSERT Trigger**?  
+70. How do you **remove duplicate records from a table**?  
+71. What is the **Difference between DELETE, TRUNCATE, and DROP**?  
+72. How do you find the **Nth highest salary in SQL**?  
+
+---
+
+These questions cover **Basic, Intermediate, and Advanced** SQL topics. Let me know if you need explanations or SQL practice queries! 🚀

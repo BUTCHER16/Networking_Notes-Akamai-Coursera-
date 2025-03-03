@@ -1,0 +1,155 @@
+Here’s a **full-fledged list of Linux & Unix interview questions**, categorized by difficulty level:  
+
+---
+
+## **Basic Linux & Unix Questions**  
+
+1. **What is Linux?**  
+2. **What are the main differences between Linux and Unix?**  
+3. **What are the different flavors of Linux?**  
+4. **What is the Linux Kernel?**  
+5. **What is a Shell in Linux?**  
+6. **What is the default shell in Linux?**  
+7. **What are the different types of shells in Linux?**  
+8. **What is the purpose of the `/bin`, `/sbin`, `/usr/bin`, and `/usr/sbin` directories?**  
+9. **Explain the file system hierarchy in Linux.**  
+10. **What is a Linux distribution (distro)? Give examples.**  
+
+---
+
+## **Linux File Management & Permissions**  
+
+11. **How do you create a file in Linux?**  
+12. **How do you copy and move files in Linux?**  
+13. **What is the difference between `cp`, `mv`, and `rsync`?**  
+14. **How do you delete a file and a directory in Linux?**  
+15. **What are file permissions in Linux?**  
+16. **Explain the meaning of the following permissions: `r`, `w`, `x`?**  
+17. **What is the command to change file permissions?**  
+18. **How do you change ownership of a file in Linux?**  
+19. **What is the difference between `chmod 777` and `chmod 755`?**  
+20. **What does `umask` do in Linux?**  
+
+---
+
+## **User & Group Management**  
+
+21. **How do you create a user in Linux?**  
+22. **How do you delete a user in Linux?**  
+23. **What is the difference between `useradd` and `adduser`?**  
+24. **How do you create a group in Linux?**  
+25. **How do you add a user to a group?**  
+26. **How do you check which groups a user belongs to?**  
+27. **What is the difference between primary and secondary groups in Linux?**  
+28. **How do you switch users in Linux?**  
+29. **What does `sudo` do in Linux?**  
+30. **How do you lock and unlock a user account in Linux?**  
+
+---
+
+## **Process Management**  
+
+31. **What is a process in Linux?**  
+32. **What is the difference between a foreground and background process?**  
+33. **How do you list all running processes in Linux?**  
+34. **What is the difference between `ps` and `top` commands?**  
+35. **How do you kill a process in Linux?**  
+36. **What is the difference between `kill`, `pkill`, and `killall`?**  
+37. **How do you find the process ID (PID) of a running process?**  
+38. **How do you check CPU usage of a process?**  
+39. **What does the `nice` and `renice` command do?**  
+40. **How do you schedule a process in Linux?**  
+
+---
+
+## **Networking & Connectivity**  
+
+41. **How do you check your IP address in Linux?**  
+42. **What command is used to check network connectivity in Linux?**  
+43. **What does the `ping` command do?**  
+44. **What is the difference between `ifconfig` and `ip addr`?**  
+45. **How do you check open ports in Linux?**  
+46. **How do you list all active network connections?**  
+47. **What is `netstat` and how is it used?**  
+48. **How do you check the routing table in Linux?**  
+49. **What is SSH? How do you use it to connect to a remote system?**  
+50. **How do you copy files from one system to another using SSH?**  
+
+---
+
+## **Disk Management & Storage**  
+
+51. **How do you check disk usage in Linux?**  
+52. **What is the difference between `df` and `du` commands?**  
+53. **How do you mount a filesystem in Linux?**  
+54. **How do you unmount a filesystem?**  
+55. **What is the `/etc/fstab` file used for?**  
+56. **What is LVM (Logical Volume Manager)?**  
+57. **How do you create a new partition in Linux?**  
+58. **What is RAID? How do you configure RAID in Linux?**  
+59. **What is the purpose of `fsck` in Linux?**  
+60. **How do you check the file system type of a partition?**  
+
+---
+
+## **Logging & Monitoring**  
+
+61. **Where are system logs stored in Linux?**  
+62. **How do you check system logs in Linux?**  
+63. **What is the `/var/log/` directory used for?**  
+64. **How do you monitor system performance in Linux?**  
+65. **What is `dmesg` used for?**  
+66. **How do you monitor disk I/O in Linux?**  
+67. **How do you find out which process is using the most memory?**  
+68. **What is `journalctl` used for?**  
+69. **How do you check system uptime in Linux?**  
+70. **What is the difference between `uptime` and `who` commands?**  
+
+---
+
+## **Linux Services & Systemd**  
+
+71. **What is a service in Linux?**  
+72. **How do you check if a service is running in Linux?**  
+73. **What is systemd in Linux?**  
+74. **How do you start, stop, and restart a service using systemctl?**  
+75. **What is the difference between `service` and `systemctl` commands?**  
+76. **How do you enable a service to start at boot?**  
+77. **How do you disable a service in Linux?**  
+78. **What is the `cron` job in Linux?**  
+79. **How do you schedule a job in Linux using `crontab`?**  
+80. **How do you list all scheduled cron jobs?**  
+
+---
+
+## **Shell Scripting & Automation**  
+
+81. **What is a shell script?**  
+82. **How do you execute a shell script in Linux?**  
+83. **What is the purpose of `#!/bin/bash` at the beginning of a script?**  
+84. **How do you make a script executable in Linux?**  
+85. **What are positional parameters in shell scripting?**  
+86. **What is the difference between `&&` and `||` in shell scripting?**  
+87. **How do you use loops in shell scripting?**  
+88. **How do you pass arguments to a shell script?**  
+89. **What is the difference between a function and a script in Linux?**  
+90. **How do you debug a shell script?**  
+
+---
+
+## **Advanced Linux Topics**  
+
+91. **What is kernel panic in Linux?**  
+92. **What is SELinux and how does it work?**  
+93. **What is the difference between hard link and soft link?**  
+94. **What is GRUB and how does it work?**  
+95. **How do you change the default boot kernel in GRUB?**  
+96. **What is IPTables? How do you configure firewall rules in Linux?**  
+97. **How do you recover a lost root password in Linux?**  
+98. **How do you analyze system performance using `sar`?**  
+99. **What is the difference between `nohup` and `&` in Linux?**  
+100. **What is the difference between `screen` and `tmux` in Linux?**  
+
+---
+
+This list covers everything from **basic to advanced** Linux and Unix topics for interviews. Let me know if you want **detailed explanations or practical exercises** on any of these questions! 🚀

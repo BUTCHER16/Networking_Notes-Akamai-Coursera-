@@ -1,0 +1,32 @@
+Since you're currently employed and interviewing for another company, your interview will likely include:  
+
+### **1. Technical Questions (Based on Your Role & Skills)**
+Since you're a **Network Engineer in a VFX studio**, expect questions in:  
+- **Networking:** OSI model, TCP/IP, VLANs, Subnetting, Routing & Switching, Firewalls, VPNs, DNS, DHCP, NAT, Load Balancing, Network Security  
+- **Linux:** RedHat administration, Ansible, Docker, Bash scripting, troubleshooting  
+- **Windows Server:** Active Directory, Group Policies, DNS, DHCP, SCCM, Remote Desktop  
+- **AWS Cloud:** EC2, VPC, IAM, Security Groups, Load Balancers, S3, CloudWatch  
+- **Terraform & Automation:** Infrastructure as Code, automating network configurations  
+- **MySQL & Database Management:** Queries, Indexing, Replication, Backup & Restore  
+
+### **2. Experience-Based & Scenario Questions**
+- Can you describe your current role and responsibilities?  
+- Have you handled network outages or security incidents? How did you resolve them?  
+- How do you optimize network performance in a VFX studio environment?  
+- Tell me about a time you automated a task. What tools did you use?  
+- Have you migrated infrastructure to the cloud? Explain the process.  
+- How do you ensure security in a multi-user network?  
+
+### **3. Behavioral & HR Questions**
+- Why are you leaving your current company?  
+- What do you know about our company?  
+- What are your strengths and weaknesses?  
+- How do you handle work pressure and tight deadlines?  
+- Where do you see yourself in 5 years?  
+
+### **4. Salary & Offer-Related Questions**
+- What are your salary expectations?  
+- Are you interviewing with other companies?  
+- When can you join?  
+
+If you want **topic-based technical questions**, let me know the priority areas, and I’ll provide a detailed set of questions for each topic.

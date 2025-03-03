@@ -1,0 +1,105 @@
+Here is a **full-fledged list of networking questions**, categorized from **basic to advanced levels**, to help you prepare thoroughly for interviews and exams.  
+
+---
+
+## **Basic Networking Questions**  
+
+1. What is **networking**, and why is it important?  
+2. Define **network topology** and explain different types (Star, Bus, Mesh, etc.).  
+3. What are the different types of networks (LAN, WAN, MAN, PAN)?  
+4. Explain the **OSI model** and its seven layers in detail.  
+5. What is the **TCP/IP model**, and how is it different from the OSI model?  
+6. What is an **IP address**, and how does it work?  
+7. What is **subnetting**, and why is it used?  
+8. What is a **default gateway**, and how does it function in a network?  
+9. What is **MAC (Media Access Control) address**, and how is it different from an IP address?  
+10. What is **ARP (Address Resolution Protocol)**, and how does it work?  
+11. What is **RARP (Reverse Address Resolution Protocol)**?  
+12. What is **DNS (Domain Name System)**, and why is it used?  
+13. Explain **DHCP (Dynamic Host Configuration Protocol)** and how it assigns IP addresses.  
+14. What is **APIPA (Automatic Private IP Addressing)**?  
+15. What is **NAT (Network Address Translation)**, and why is it required?  
+16. What is **port forwarding**, and how does it work?  
+17. What is the difference between **TCP and UDP**?  
+18. What is the **three-way handshake in TCP**?  
+19. What is a **collision domain and a broadcast domain**?  
+20. What are **public and private IP addresses**?  
+21. What is **IPv4**, and how is it different from **IPv6**?  
+22. What are the different classes of IPv4 addresses (Class A, B, C, D, E)?  
+23. What is **CIDR (Classless Inter-Domain Routing)**?  
+24. Explain the difference between **unicast, multicast, and broadcast**.  
+25. What is a **loopback address**, and why is it used?  
+
+---
+
+## **Intermediate Networking Questions**  
+
+26. What is the difference between **static and dynamic routing**?  
+27. Explain **RIP (Routing Information Protocol)**.  
+28. What is **OSPF (Open Shortest Path First)**, and how does it work?  
+29. Explain **EIGRP (Enhanced Interior Gateway Routing Protocol)**.  
+30. What is **BGP (Border Gateway Protocol)**, and how is it used in networking?  
+31. What is **MPLS (Multiprotocol Label Switching)**?  
+32. What is a **VLAN (Virtual Local Area Network)**, and how does it work?  
+33. What are **trunking and access ports** in VLAN?  
+34. What is **STP (Spanning Tree Protocol)**, and why is it used?  
+35. What is **HSRP (Hot Standby Router Protocol)**?  
+36. What is **VRRP (Virtual Router Redundancy Protocol)**?  
+37. What is **port security**, and how is it implemented?  
+38. Explain **PoE (Power over Ethernet)** and its applications.  
+39. What is **QoS (Quality of Service)**, and why is it important?  
+40. What is **DMZ (Demilitarized Zone)** in networking?  
+41. What is **dual-stack networking**, and how does it support IPv4 and IPv6?  
+42. What is **network redundancy**, and why is it important?  
+43. What is **failover**, and how does it help in network reliability?  
+44. Explain **proxy servers** and their use in networking.  
+45. What is a **firewall**, and how does it secure a network?  
+46. What is the difference between a **stateful and stateless firewall**?  
+47. What are **ACLs (Access Control Lists)**, and how are they used in networking?  
+48. What is **NTP (Network Time Protocol)**, and why is it used?  
+49. What is **port mirroring**, and why is it used in a network?  
+50. What is a **network bottleneck**, and how do you troubleshoot it?  
+
+---
+
+## **Advanced Networking Questions**  
+
+51. What is **SDN (Software-Defined Networking)**, and how does it work?  
+52. What is **VXLAN (Virtual Extensible LAN)**, and how is it used?  
+53. What is **LISP (Locator/ID Separation Protocol)**?  
+54. What are **overlay networks**, and how do they work in cloud computing?  
+55. What is **IKEv1 and IKEv2**, and how do they work in VPNs?  
+56. Explain **IPsec (Internet Protocol Security)** and how it secures data transmission.  
+57. What is **GRE (Generic Routing Encapsulation) Tunnel**?  
+58. What is **SIP (Session Initiation Protocol)**, and how is it used in VoIP?  
+59. What is **BGP peering**, and how does it work?  
+60. What is a **floating static route**, and when is it used?  
+61. What is **IPv6 tunneling**, and how does it help in transitioning from IPv4 to IPv6?  
+62. What is **Deep Packet Inspection (DPI)**, and how does it enhance network security?  
+63. What is **EtherChannel**, and how does it improve bandwidth and redundancy?  
+64. What is **LACP (Link Aggregation Control Protocol)**, and how is it used?  
+65. What is **BPDU (Bridge Protocol Data Unit)**, and how does it work?  
+66. What is **RADIUS (Remote Authentication Dial-In User Service)**?  
+67. What is **TACACS+ (Terminal Access Controller Access-Control System Plus)**?  
+68. What is **NetFlow**, and how does it help in network monitoring?  
+69. What is **SNMP (Simple Network Management Protocol)**, and how is it used?  
+70. What is **network virtualization**, and how is it used in cloud computing?  
+
+---
+
+## **Scenario-Based & Practical Networking Questions**  
+
+71. A user reports that they can't access the internet. What troubleshooting steps would you take?  
+72. How would you configure a static IP address on a Linux/Windows system?  
+73. If a network has **high latency**, how would you troubleshoot it?  
+74. You are given a subnet `192.168.1.0/24`. How many usable hosts are available?  
+75. How do you find the **default gateway of a system** using CLI commands?  
+76. How do you check **open ports on a network device**?  
+77. You need to limit bandwidth for specific users on a network. How would you do it?  
+78. If you suspect a **network loop**, how would you identify and resolve it?  
+79. How would you set up a **VPN connection between two offices**?  
+80. A server is reachable via **IP but not via hostname**. What could be the issue?  
+
+---
+
+This list covers **everything from basic concepts to advanced networking topics** and practical troubleshooting scenarios. Let me know if you want any explanations or real-world examples! 🚀

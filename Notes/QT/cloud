@@ -1,0 +1,150 @@
+Here’s a **full-fledged set of Cloud Computing interview questions** ranging from basic to advanced levels. These questions will help you thoroughly prepare for cloud computing concepts, architecture, services, security, and deployment.
+
+---
+
+## **1. Cloud Computing Basics**  
+1. What is Cloud Computing? Explain its key characteristics.  
+2. What are the different types of cloud computing?  
+3. What are the advantages and disadvantages of cloud computing?  
+4. What are the different deployment models in cloud computing? (Public, Private, Hybrid, and Community Cloud)  
+5. What are the different service models in cloud computing? (IaaS, PaaS, SaaS)  
+6. What is the difference between Traditional IT infrastructure and Cloud Computing?  
+7. What are the major cloud service providers, and how do they differ?  
+8. What is multi-cloud, and why is it used?  
+9. What is serverless computing, and how does it differ from traditional computing?  
+10. What is cloud bursting?  
+
+---
+
+## **2. Cloud Service Models (IaaS, PaaS, SaaS, FaaS)**  
+11. What is Infrastructure as a Service (IaaS)? Provide examples.  
+12. What is Platform as a Service (PaaS)? Provide examples.  
+13. What is Software as a Service (SaaS)? Provide examples.  
+14. What is Function as a Service (FaaS), and how is it different from PaaS?  
+15. Compare and contrast IaaS, PaaS, and SaaS.  
+16. What is the difference between cloud-native and cloud-enabled applications?  
+
+---
+
+## **3. Virtualization & Containers in Cloud Computing**  
+17. What is virtualization in cloud computing?  
+18. What is a hypervisor? Explain its types.  
+19. What is the difference between Type 1 and Type 2 hypervisors?  
+20. What is the role of a hypervisor in cloud computing?  
+21. What are Virtual Machines (VMs), and how do they differ from containers?  
+22. What is containerization? How does it improve cloud efficiency?  
+23. What is the difference between Docker and Kubernetes?  
+24. What are the advantages of using Kubernetes in a cloud environment?  
+25. What is the role of orchestration in cloud computing?  
+
+---
+
+## **4. Cloud Storage & Data Management**  
+26. What are the different types of cloud storage? (Block, Object, File)  
+27. What is Amazon S3, and how does it work?  
+28. What is Google Cloud Storage, and how does it compare to Amazon S3?  
+29. What is Blob storage in Azure?  
+30. What are cloud storage tiers, and how do they impact cost and performance?  
+31. What is an Object Storage Service, and how does it differ from Block Storage?  
+32. What is the difference between EBS (Elastic Block Store) and EFS (Elastic File System)?  
+33. How do cloud providers ensure data redundancy and high availability?  
+34. What is RAID, and how is it used in cloud storage?  
+35. How does cloud caching work to improve performance?  
+
+---
+
+## **5. Cloud Networking**  
+36. What is a Virtual Private Cloud (VPC)?  
+37. How does a VPC differ from a traditional network?  
+38. What are subnets, and why are they important in cloud networking?  
+39. What is a NAT Gateway, and how does it work?  
+40. What is a VPN in cloud computing? How is it implemented?  
+41. What is a Content Delivery Network (CDN)?  
+42. What are Load Balancers, and how do they work in cloud environments?  
+43. What is an API Gateway, and why is it important in cloud computing?  
+44. How does cloud-based DNS (like AWS Route 53) work?  
+45. What is Direct Connect in AWS?  
+
+---
+
+## **6. Cloud Security & Compliance**  
+46. What are the main security risks in cloud computing?  
+47. How is data encrypted in cloud storage?  
+48. What are the different types of cloud security controls?  
+49. What is Identity and Access Management (IAM)?  
+50. What is role-based access control (RBAC)?  
+51. What is a Shared Responsibility Model in cloud computing?  
+52. What is a Cloud Access Security Broker (CASB)?  
+53. What are DDoS protection mechanisms in cloud computing?  
+54. How does Multi-Factor Authentication (MFA) enhance cloud security?  
+55. What are cloud compliance standards such as GDPR, HIPAA, and ISO 27001?  
+
+---
+
+## **7. Cloud Automation & Monitoring**  
+56. What is cloud automation, and why is it important?  
+57. What are Infrastructure as Code (IaC) tools?  
+58. What is Terraform, and how does it work in cloud automation?  
+59. What is Ansible, and how does it help with cloud deployments?  
+60. How does cloud monitoring work?  
+61. What are some popular cloud monitoring tools?  
+62. What is auto-scaling in cloud computing?  
+63. What is elasticity in cloud computing?  
+64. How does AWS CloudWatch help in cloud monitoring?  
+65. How does Azure Monitor work?  
+
+---
+
+## **8. Cloud Migration & Deployment Strategies**  
+66. What is cloud migration, and why do companies adopt it?  
+67. What are the different cloud migration strategies (Rehost, Refactor, Replatform, etc.)?  
+68. What are the challenges of cloud migration?  
+69. How do you ensure a smooth cloud migration process?  
+70. What is a hybrid cloud strategy?  
+71. What is DevOps, and how does it relate to cloud computing?  
+72. What are CI/CD pipelines, and how do they work in cloud environments?  
+73. What are Blue-Green and Canary Deployments in cloud computing?  
+74. What is the difference between Stateless and Stateful applications in the cloud?  
+75. How do Microservices benefit from cloud computing?  
+
+---
+
+## **9. Edge Computing & Serverless Architecture**  
+76. What is Edge Computing, and how does it differ from cloud computing?  
+77. What are the benefits of Edge Computing?  
+78. How does Edge Computing reduce latency?  
+79. What is a serverless architecture?  
+80. How do AWS Lambda, Google Cloud Functions, and Azure Functions work?  
+81. What are the use cases of serverless computing?  
+82. What is an event-driven architecture in serverless computing?  
+83. How does cost optimization work in serverless computing?  
+
+---
+
+## **10. Cloud Performance & Cost Management**  
+84. What are the key factors that affect cloud performance?  
+85. How do cloud providers ensure uptime and reliability?  
+86. What is a Service Level Agreement (SLA) in cloud computing?  
+87. What are cloud cost optimization strategies?  
+88. How does Reserved Instance pricing work in AWS?  
+89. What is a Pay-as-you-go pricing model?  
+90. What are Spot Instances, and how are they beneficial?  
+91. What are the different storage classes in AWS S3, and how do they impact cost?  
+92. How does Google Cloud's Sustained Use Discounts work?  
+
+---
+
+## **11. Real-World Scenario-Based Questions**  
+93. Your company wants to move to the cloud. How would you assess the best provider for your needs?  
+94. How would you design a fault-tolerant cloud infrastructure?  
+95. Your cloud bill is too high. How would you reduce costs?  
+96. Your cloud-based application is facing high latency. How would you troubleshoot and improve performance?  
+97. How would you ensure high availability in a cloud environment?  
+98. Your database needs to handle high read/write operations. How would you optimize it in the cloud?  
+99. Your company needs to store large-scale log data. Which cloud storage solution would you choose and why?  
+100. Your organization wants to implement DevOps in the cloud. How would you set up a CI/CD pipeline?  
+
+---
+
+These **100 Cloud Computing interview questions** cover **fundamentals, security, networking, deployment, automation, and real-world scenarios.**  
+Would you like **detailed answers** for specific questions? 🚀

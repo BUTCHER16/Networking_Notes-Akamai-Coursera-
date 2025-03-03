@@ -1,0 +1,108 @@
+***  Python  ***
+
+### **Full-Fledged Questions in Programming (Python, C++, Shell Scripting)**  
+
+---
+
+## **Python Programming Questions**  
+
+### **1. Python Basics**  
+1. What is Python, and how is it different from other programming languages?  
+2. Explain the difference between dynamically typed and statically typed languages. Where does Python fall?  
+3. What are Python’s built-in data types? Explain with examples.  
+4. Explain mutable and immutable types in Python. Give examples.  
+5. What is PEP 8? Why is it important?  
+6. What are Python’s built-in functions? Name a few.  
+7. Explain the difference between `is` and `==` in Python.  
+
+### **2. Data Structures in Python**  
+8. What is the difference between a list and a tuple in Python?  
+9. How do you create a dictionary in Python? Explain its uses.  
+10. What are sets in Python? How are they different from lists?  
+11. How do you remove duplicate elements from a list in Python?  
+12. What are list comprehensions in Python? Give an example.  
+13. How do you sort a dictionary by its values?  
+
+### **3. Functions and Modules**  
+14. How do you define a function in Python? Explain with an example.  
+15. What is the difference between *args and **kwargs?  
+16. What is recursion in Python? Provide an example.  
+17. How do you import a module in Python? What is the difference between `import module` and `from module import function`?  
+18. What is the difference between a function and a lambda function in Python?  
+
+### **4. Object-Oriented Programming (OOPs) in Python**  
+19. Explain the four pillars of Object-Oriented Programming (OOP) in Python.  
+20. What is the difference between a class and an object?  
+21. What is the difference between instance variables and class variables?  
+22. Explain inheritance in Python with an example.  
+23. What is method overriding? Give an example.  
+24. What is multiple inheritance in Python? How do you resolve conflicts in multiple inheritance?  
+
+### **5. File Handling**  
+25. How do you open a file in Python? Explain different modes of opening files.  
+26. How do you read a file in Python? Explain `read()`, `readline()`, and `readlines()`.  
+27. How do you write data into a file in Python?  
+28. What is the difference between `with open()` and `open()`?  
+
+### **6. Exception Handling**  
+29. What are exceptions in Python? How do you handle them?  
+30. What is the difference between `try-except` and `try-finally`?  
+31. What are custom exceptions in Python? How do you create one?  
+
+### **7. Advanced Python Concepts**  
+32. What are decorators in Python? Provide an example.  
+33. What are generators in Python? How are they different from iterators?  
+34. What is multithreading in Python? How do you create a thread?  
+35. What is the GIL (Global Interpreter Lock) in Python?  
+36. How do you perform multiprocessing in Python?  
+37. What is the difference between shallow copy and deep copy in Python?  
+
+### **8. Python Database Handling**  
+38. How do you connect a Python application to a MySQL database?  
+39. What is an ORM in Python? Give an example of Django ORM.  
+
+### **9. Python Web Frameworks**  
+40. What is Flask? How is it different from Django?  
+41. How do you create an API in Flask?  
+42. Explain the concept of middleware in Django.  
+
+## **Shell Scripting Questions**  
+
+### **1. Basics of Shell Scripting**  
+1. What is Shell Scripting? Why is it used?  
+2. What are the different types of shells in Linux?  
+3. How do you write a basic shell script?  
+
+### **2. Shell Commands**  
+4. What is the difference between `>` and `>>` in Shell scripting?  
+5. How do you find a file in Linux using the command line?  
+6. How do you copy a file from one location to another using a shell script?  
+7. How do you check disk usage in Linux?  
+8. How do you check running processes in Linux?  
+
+### **3. Variables and Operators in Shell Scripting**  
+9. What are positional parameters in Shell scripting?  
+10. How do you define and use a variable in a Shell script?  
+11. Explain the difference between `$0`, `$1`, `$2`, `$@`, and `$#`.  
+12. What are arithmetic operators in Shell scripting?  
+
+### **4. Control Statements in Shell Scripting**  
+13. How do you write an `if-else` statement in Shell scripting?  
+14. What is the `case` statement in Shell scripting?  
+15. How do you write a `for` loop in a Shell script?  
+16. Explain the `while` loop with an example.  
+
+### **5. Functions and File Handling in Shell Scripting**  
+17. How do you define a function in a Shell script?  
+18. How do you pass arguments to a function in Shell scripting?  
+19. How do you read a file in a Shell script?  
+
+### **6. Advanced Shell Scripting Concepts**  
+20. How do you automate a task using cron jobs?  
+21. What is the difference between `crontab` and `at` command?  
+22. What is `sed` in Shell scripting?  
+23. What is `awk` in Shell scripting?  
+24. How do you kill a process in Linux using a Shell script?  
+
+---
+

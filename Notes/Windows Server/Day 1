@@ -600,16 +600,158 @@ company.com
 | **OU** | A container within a domain to organize and manage users, groups, and policies. |
 | **Site** | Represents a physical location and optimizes authentication and replication. |
 
----
-# **7️⃣ Common Interview Questions on AD Structure**
-🔹 **What is a Domain in Active Directory?**  
-🔹 **How does a Tree differ from a Forest in AD?**  
-🔹 **What is the purpose of Organizational Units (OUs)?**  
-🔹 **How do Sites improve Active Directory performance?**  
-🔹 **What is a Global Catalog in AD?**  
-🔹 **How do Trusts work between Domains and Forests?**  
-🔹 **What are the benefits of using a multi-forest setup?**  
+
+
+# **Active Directory (AD) Users, Groups, and Computers**
+
+Active Directory (AD) allows organizations to manage **users, groups, and computers** centrally. These objects help in **authentication, authorization, and administration** within a Windows domain environment.
 
 ---
-### 🚀 **Next Steps**
-Would you like **practical lab exercises** to set up a small AD environment in Windows Server? 🔥
+
+# **1️⃣ Active Directory Users**
+## **📌 What is an AD User?**
+An **Active Directory User** is an account that represents a **real person** or a **service account** within the domain. Users must **authenticate (log in)** to access resources like files, applications, and printers.
+
+### **Types of AD Users**
+| **User Type**         | **Description** |
+|----------------------|----------------|
+| **Local User**       | Exists only on a single computer, not managed by AD. |
+| **Domain User**      | Created in AD and can log in to any domain-joined computer. |
+| **Built-in Users**   | Predefined accounts like `Administrator` and `Guest`. |
+| **Service Accounts** | Special accounts used by applications and services (e.g., SQL Server). |
+
+### **🔹 Key Attributes of an AD User**
+- **Username (sAMAccountName)** – Unique login name (e.g., `john.doe`).
+- **User Principal Name (UPN)** – Email-style login (e.g., `john.doe@company.com`).
+- **Password** – Securely stored, with Group Policies enforcing complexity.
+- **Groups** – Users can belong to security/distribution groups.
+- **Account Expiration** – Can be set to disable the account after a certain date.
+
+### **🔹 User Management Commands**
+```powershell
+# Create a New User
+New-ADUser -Name "John Doe" -GivenName "John" -Surname "Doe" -SamAccountName "jdoe" -UserPrincipalName "jdoe@company.com" -Path "OU=Users,DC=company,DC=com" -AccountPassword (ConvertTo-SecureString "Password123!" -AsPlainText -Force) -Enabled $true
+
+# Reset Password
+Set-ADAccountPassword -Identity jdoe -Reset -NewPassword (ConvertTo-SecureString "NewPass123!" -AsPlainText -Force)
+
+# Disable User Account
+Disable-ADAccount -Identity jdoe
+```
+
+---
+
+# **2️⃣ Active Directory Groups**
+## **📌 What is an AD Group?**
+A **Group** is a collection of **users, computers, or other groups** that simplifies **permissions management**.
+
+### **🔹 Types of Groups**
+#### **1. Security Groups**
+- Used for **assigning permissions** to resources (e.g., files, folders, printers).
+- Can be added to **Access Control Lists (ACLs)** for security settings.
+
+#### **2. Distribution Groups**
+- Used for **email distribution lists** (e.g., `marketing@company.com`).
+- Cannot be assigned security permissions.
+
+### **🔹 Group Scopes**
+| **Scope**             | **Description** |
+|----------------------|----------------|
+| **Local Group**       | Exists only on one computer and manages local resources. |
+| **Domain Local Group** | Can include users from **any domain**, but permissions apply only in the local domain. |
+| **Global Group**      | Can include **users from the same domain**, but permissions can be assigned in any domain. |
+| **Universal Group**   | Can include **users from any domain** and assign permissions in any domain. |
+
+### **🔹 Group Management Commands**
+```powershell
+# Create a Security Group
+New-ADGroup -Name "IT Admins" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=company,DC=com"
+
+# Add a User to a Group
+Add-ADGroupMember -Identity "IT Admins" -Members jdoe
+
+# Remove a User from a Group
+Remove-ADGroupMember -Identity "IT Admins" -Members jdoe -Confirm:$false
+```
+
+---
+
+# **3️⃣ Active Directory Computers**
+## **📌 What is an AD Computer?**
+An **AD Computer Object** represents a **physical or virtual machine** that is part of the domain.
+
+### **🔹 Why Are Computers Added to AD?**
+- **Centralized Management**: Apply policies to all domain-joined machines.
+- **Security & Authentication**: Ensures only authorized devices can access domain resources.
+- **Remote Management**: Allows IT admins to control, monitor, and update computers remotely.
+
+### **🔹 Computer Object Attributes**
+| **Attribute**      | **Description** |
+|-------------------|----------------|
+| **Computer Name** | Unique name of the machine (e.g., `PC-123`). |
+| **Operating System** | Stores OS version (e.g., `Windows 10 Pro`). |
+| **Last Logon Time** | Tracks when the machine last authenticated. |
+
+### **🔹 Computer Management Commands**
+```powershell
+# Create a New Computer Object
+New-ADComputer -Name "PC-001" -Path "OU=Computers,DC=company,DC=com"
+
+# Move a Computer to a Different OU
+Move-ADObject -Identity "CN=PC-001,OU=Computers,DC=company,DC=com" -TargetPath "OU=SalesComputers,DC=company,DC=com"
+
+# Disable a Computer
+Disable-ADAccount -Identity PC-001
+```
+
+---
+
+# **4️⃣ Managing Users, Groups, and Computers with Group Policy**
+## **📌 What is Group Policy?**
+Group Policy allows **admins to enforce security and configuration settings** for users and computers.
+
+### **🔹 Common Group Policies for Users**
+- **Password Policies** (Minimum Length, Complexity)
+- **Account Lockout Policies** (Failed Login Attempts)
+- **Desktop Restrictions** (Disable Task Manager, Hide Control Panel)
+- **Mapped Network Drives** (Auto-map user drives on login)
+
+### **🔹 Common Group Policies for Computers**
+- **Software Deployment** (Install apps automatically)
+- **Security Settings** (Disable USB ports, block PowerShell)
+- **Windows Updates** (Force automatic updates)
+- **Firewall Rules** (Block/Allow specific traffic)
+
+---
+
+# **🔥 Summary Table**
+| **AD Object** | **Purpose** |
+|--------------|-------------|
+| **Users** | Represents employees, admins, or service accounts. |
+| **Groups** | Collection of users for permission management. |
+| **Computers** | Represents domain-joined machines. |
+| **Group Policy** | Enforces security and configuration settings. |
+
+
+
+# **Group Policy Basics (GPO Creation & Management)**
+
+## **1️⃣ What is Group Policy?**
+- A Windows feature to **manage security, settings, and configurations** across multiple computers in Active Directory.
+- **GPO (Group Policy Object):** A set of rules applied to users or computers.
+- **GPMC (Group Policy Management Console):** Tool to create, edit, and manage GPOs.
+- **Processing Order:** Local → Site → Domain → OU (LSDOU).
+
+## **2️⃣ How to Access Group Policy**
+- **For Local Policy (Single Computer):** `Win + R` → `gpedit.msc`
+- **For Domain Policy:** Server Manager → `gpmc.msc`    
+
+### **📝 Quick Summary:**
+✔ **Create GPO:** `gpmc.msc` → Right-click **Group Policy Objects** → **New**.
+✔ **Edit GPO:** `gpmc.msc` → Select GPO → **Edit**.
+✔ **Link GPO to OU:** `gpmc.msc` → Right-click OU → **Link Existing GPO**.
+✔ **Force GPO Update:** `gpupdate /force`.
+✔ **Check GPO Status:** `gpresult /r`.
+
+This should help with quick recall before your interview! 🚀
+

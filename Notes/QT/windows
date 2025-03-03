@@ -1,0 +1,142 @@
+### **Windows Server & Administration - Full-Fledged Interview Questions**  
+
+Here’s a **comprehensive set of Windows Server interview questions**, categorized for **basic, intermediate, and advanced** levels.  
+
+---
+
+## **Basic Level Questions**  
+
+### **1. Introduction to Windows Server**  
+- What is Windows Server, and how does it differ from a normal Windows OS?  
+- What are the different editions of Windows Server? (Standard, Datacenter, Essentials, etc.)  
+- What is the latest version of Windows Server, and what are its key features?  
+- What is the difference between Windows Server 2016, 2019, and 2022?  
+
+### **2. Windows Server Installation & Configuration**  
+- How do you install Windows Server?  
+- What are the system requirements for installing Windows Server?  
+- What are the different installation types in Windows Server? (Desktop Experience vs. Server Core)  
+- How do you upgrade from an older version of Windows Server?  
+- How do you activate Windows Server?  
+
+### **3. Active Directory (AD) & Domain Services**  
+- What is Active Directory?  
+- What is the purpose of Active Directory Domain Services (AD DS)?  
+- What is a Domain Controller (DC)?  
+- What is the difference between a Workgroup and a Domain?  
+- What are Forests, Domains, and Organizational Units (OUs) in AD?  
+- What is Group Policy, and how is it used in AD?  
+- What is the difference between a Local User and a Domain User?  
+- How do you create and manage users in Active Directory?  
+- What is the purpose of the `dsadd` command?  
+
+### **4. User & Group Management**  
+- How do you create a new user in Windows Server?  
+- What are the different types of groups in Active Directory?  
+- What is the difference between a Security Group and a Distribution Group?  
+- How do you reset a user's password in Active Directory?  
+- How do you assign permissions to users or groups?  
+
+---
+
+## **Intermediate Level Questions**  
+
+### **5. DNS (Domain Name System) Configuration**  
+- What is DNS, and why is it used in Windows Server?  
+- How do you install and configure the DNS role in Windows Server?  
+- What are Forward Lookup Zones and Reverse Lookup Zones?  
+- What is an A record, CNAME record, and MX record in DNS?  
+- What is a PTR record, and why is it needed?  
+- What is Dynamic DNS (DDNS), and how does it work?  
+- How do you troubleshoot DNS issues?  
+
+### **6. DHCP (Dynamic Host Configuration Protocol) Configuration**  
+- What is DHCP, and why is it used?  
+- How do you install and configure a DHCP server in Windows Server?  
+- What are DHCP Scopes and Reservations?  
+- What is the lease period in DHCP, and how does it work?  
+- How do you assign static IP addresses using DHCP?  
+
+### **7. File & Storage Services**  
+- How do you configure and manage shared folders in Windows Server?  
+- What are NTFS permissions vs. Share permissions?  
+- How do you enable and configure File Server Resource Manager (FSRM)?  
+- What is Distributed File System (DFS) in Windows Server?  
+- How do you configure RAID in Windows Server?  
+
+### **8. Windows Server Backup & Restore**  
+- What are the different types of backups in Windows Server?  
+- How do you configure Windows Server Backup?  
+- What is Volume Shadow Copy Service (VSS)?  
+- How do you restore Active Directory objects?  
+- What is the difference between Full, Incremental, and Differential backup?  
+
+### **9. PowerShell & Command-Line Administration**  
+- What is PowerShell, and how is it used in Windows Server?  
+- What are some common PowerShell commands for server administration?  
+- How do you create a new user using PowerShell?  
+- How do you check system information using PowerShell?  
+- What is the difference between `Get-Service` and `Get-Process`?  
+
+---
+
+## **Advanced Level Questions**  
+
+### **10. Group Policy & Security Policies**  
+- What is Group Policy, and how does it work?  
+- What is the difference between Group Policy Objects (GPOs) and Local Policies?  
+- How do you enforce a Group Policy update?  
+- What is the difference between Enforced and Inherited Group Policies?  
+- How do you troubleshoot Group Policy issues?  
+
+### **11. Windows Server Roles & Features**  
+- What are the different roles available in Windows Server?  
+- What is the purpose of the Remote Desktop Services (RDS) role?  
+- How do you enable and configure Hyper-V in Windows Server?  
+- What is the Print Server role, and how do you set it up?  
+- How do you configure and manage an IIS Web Server in Windows Server?  
+
+### **12. High Availability & Clustering**  
+- What is failover clustering in Windows Server?  
+- How do you configure a failover cluster?  
+- What is Network Load Balancing (NLB), and how does it work?  
+- What is Storage Spaces Direct (S2D)?  
+- How do you ensure high availability of critical services?  
+
+### **13. Remote Access & VPN Configuration**  
+- How do you configure a VPN server in Windows Server?  
+- What is Remote Desktop Services (RDS), and how is it configured?  
+- What is DirectAccess, and how does it differ from a traditional VPN?  
+- How do you troubleshoot Remote Desktop connectivity issues?  
+
+### **14. Security & Hardening Windows Server**  
+- How do you secure Windows Server from cyber threats?  
+- What is BitLocker, and how does it protect data?  
+- How do you configure firewall rules in Windows Server?  
+- What is Windows Defender ATP, and how does it enhance security?  
+- What are Audit Policies, and how do they help in security monitoring?  
+
+### **15. Performance Monitoring & Troubleshooting**  
+- What tools are used for monitoring performance in Windows Server?  
+- How do you check CPU and memory usage on a server?  
+- What is the Event Viewer, and how is it used for troubleshooting?  
+- How do you analyze Windows Server logs?  
+- What is Task Manager vs. Resource Monitor vs. Performance Monitor?  
+
+---
+
+## **Scenario-Based Questions**  
+
+- A user is unable to log in to the domain. How do you troubleshoot?  
+- A critical server crashes. What are your immediate steps to recover it?  
+- Your DNS server stops resolving names. How do you fix it?  
+- You need to apply a security policy to multiple users in a domain. How do you proceed?  
+- A company's Active Directory is getting too large and unmanageable. How do you optimize it?  
+- How do you migrate user accounts and groups from one Windows Server to another?  
+- Your Windows Server is running slow. How do you diagnose the issue?  
+
+---
+
+## **Final Thoughts**  
+
+These **Windows Server Administration** questions cover **theoretical, practical, and scenario-based** questions you might face in an interview. Want explanations or hands-on practice with specific topics? Let me know! 🚀
